@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+    <meta charset="UTF-8" />
+    <title>Welcome to Mbare Media</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+<!-- Cabin REGULAR400 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+<!-- Montserrat -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NavBar -->
+<nav>
+  <button class="burgbutton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="menu"><g data-name="Layer 2"><g data-name="menu"><rect width="18" height="2" x="3" y="11" rx=".95" ry=".95"></rect><rect width="18" height="2" x="3" y="16" rx=".95" ry=".95"></rect><rect width="18" height="2" x="3" y="6" rx=".95" ry=".95"></rect></g></g></svg></button>
+  <ul class="navmob" id="navbar">
+    <li><a href="#home"><h2>HOME</h2></a></li>
+    <li><a href="chi-siamo/index.html"><h2>CHI SIAMO</h2></a></li>
+    <li><a href="servizi/index.html"><h2>SERVIZI</h2></a></li>
+    <li><a href="/Portfolio/index.html"><h2>PORTFOLIO</h2></a></li>
+    <!-- <li><a href="#home"><h2>WEBDEVELOPER</h2></a></li> COMING SOON?-->
+   </ul>
+  <ul class="navmenu" id="navbar">
+   <img src="media/logo.png" alt="mbare media">
+   <li ><a href="#home"><h2>HOME</h2></a></li>
+   <li><a href="chi-siamo/index.html"><h2>CHI SIAMO</h2></a></li>
+   <li><a href="servizi/index.html"><h2>SERVIZI</h2></a></li>
+   <li><a href="/Portfolio/index.html"><h2>PORTFOLIO</h2></a></li>
+   <!-- <li><a href="#home"><h2>WEBDEVELOPER</h2></a></li> COMING SOON?-->
+  </ul> 
+ </nav>
+<!-- Home -->
+<div class="defaultsection" id="home">
+  <div class="top-section">
+  <b><h1>HOME</h1></b>
+  <div class="box1"></div>
+  <button onclick="window.location.href='#01'"><div class="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#232326" d="m18.294 16.793-5.293 5.293V1h-1v21.086l-5.295-5.294-.707.707L12.501 24l6.5-6.5-.707-.707z"/></svg></div></button>
+  </div>
+  <img src="media/logo.png" alt="mbare media">
+  <div class="box2"></div>
+</div>
+<!-- 01 -->
+<div class="defaultsection" id="01">
+  <div class="top-section">
+
+  <div class="box1"></div>
+  <button onclick="window.location.href='#home'"><div class="buttonup"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#232326" d="m18.294 16.793-5.293 5.293V1h-1v21.086l-5.295-5.294-.707.707L12.501 24l6.5-6.5-.707-.707z"/></svg></div></button>
+  </div>
+  <div class="text">
+    <h1>Cos'é 'Mbare media?</h1>
+    <p>Mbare media è una startup all'avanguardia fondata nel 2023 in Sicilia che si dedica al montaggio e al marketing.
+      Offre soluzioni innovative e creative per le aziende che desiderano distinguersi nel panorama digitale. Mbare media si propone di trasformare i contenuti video in strumenti di comunicazione potenti, coinvolgenti ed efficaci.
+    </p>
+  </div>
+  <div class="box2"></div>
+</div>
+
+<script>
+var btnContainer = document.querySelector('.navmob');
+const btns = document.querySelector(".burgbutton");
+var prevScrollpos = 10;
+var isActive =false;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+
+// Loop through the buttons and add the active class to the current/clicked button
+
+  btns.addEventListener("click", function() {
+    
+    if(isActive == false){
+    btnContainer.classList.add('active')
+    isActive =true;
+    }else{
+      document.querySelector('.active')?.classList.remove('active');
+      isActive =false;
+    }
+
+  });
+
+
+
+</script>
+
+</body>
+</html>
+  <!-- Sito web realizzato da Francesco Gissara -->
+<!--
+███████╗██████╗  █████╗ ███╗   ██╗ ██████╗███████╗███████╗ ██████╗ ██████╗      ██████╗ ██╗███████╗███████╗ █████╗ ██████╗  █████╗ 
+██╔════╝██╔══██╗██╔══██╗████╗  ██║██╔════╝██╔════╝██╔════╝██╔════╝██╔═══██╗    ██╔════╝ ██║██╔════╝██╔════╝██╔══██╗██╔══██╗██╔══██╗
+█████╗  ██████╔╝███████║██╔██╗ ██║██║     █████╗  ███████╗██║     ██║   ██║    ██║  ███╗██║███████╗███████╗███████║██████╔╝███████║
+██╔══╝  ██╔══██╗██╔══██║██║╚██╗██║██║     ██╔══╝  ╚════██║██║     ██║   ██║    ██║   ██║██║╚════██║╚════██║██╔══██║██╔══██╗██╔══██║
+██║     ██║  ██║██║  ██║██║ ╚████║╚██████╗███████╗███████║╚██████╗╚██████╔╝    ╚██████╔╝██║███████║███████║██║  ██║██║  ██║██║  ██║
+╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝╚══════╝╚══════╝ ╚═════╝ ╚═════╝      ╚═════╝ ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝
+-->
+                                                                                                                                   
